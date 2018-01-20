@@ -9,13 +9,22 @@ spring:
   application:
     name: rentonator
   datasource:
-    rentonator:
-      driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://betroom.chzhvascxjqk.sa-east-1.rds.amazonaws.com:3306/rentonator
-      username: app_betroom
-      password: Sfpug6ym
-      testWhileIdle: true
-      validationQuery: SELECT 1
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://betroom.chzhvascxjqk.sa-east-1.rds.amazonaws.com:3306/rentonator
+    username: app_betroom
+    password: Sfpug6ym
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  jpa:
+    show-sql: false
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
 server:
   context-path: /rentonator
 logging:
