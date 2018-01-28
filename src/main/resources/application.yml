@@ -24,8 +24,5 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5Dialect
-
-server:
-  context-path: /rentonator
 logging:
   config: classpath:log4j2-dev.xml

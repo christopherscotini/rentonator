@@ -65,12 +65,12 @@ public class Customer {
 		this.createdAt = new Date();
 		this.updatedAt = new Date();
 	}
-	
+
 	@PreUpdate
 	void updatedAt() {
 		this.updatedAt = new Date();
 	}
-	
+
 	public String getEmail() {
 		return email;
 	}
